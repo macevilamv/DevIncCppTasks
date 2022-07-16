@@ -11,7 +11,7 @@ int main()
 	int maxNumberDigits = 0;
 	int setwParameter = 0;
 	
-	while(maxNumber > 0)
+	while (maxNumber > 0)
 	{
 		maxNumber /= 10;
 		maxNumberDigits++;
