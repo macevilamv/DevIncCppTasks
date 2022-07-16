@@ -16,8 +16,8 @@ int main()
     bool errorConditionKnight2 = false;
     const int ONE_STEP = 1;
     const int TWO_STEPS = 2;
-	int xDifference = 0;
-	int yDifference = 0; 
+    int xDifference = 0;
+    int yDifference = 0; 
 
     cout << "Enter coordinates X for the first knight: ";
     cin >> xKnight1;
@@ -35,8 +35,8 @@ int main()
     errorConditionKnight2 = (xKnight2 > maxSize or xKnight1 < minSize) or (yKnight1 > maxSize or yKnight2 < minSize);
     
     if (errorConditionKnight1 or errorConditionKnight2) {
-		cout << "Error: Wrong coordinates. Use numbers < 9 and > 0" << endl;
-		return 1;
+	cout << "Error: Wrong coordinates. Use numbers < 9 and > 0" << endl;
+	return 1;
     } else if (xKnight1 == xKnight2 and yKnight1 == yKnight2) {
     	cout << "Error: Wrong coordinates. Horses in the same position";
     	return 2;
@@ -46,8 +46,8 @@ int main()
     yDifference = abs(yKnight1 - yKnight2);
     
     if (xDifference == TWO_STEPS and yDifference == ONE_STEP or xDifference == ONE_STEP and yDifference == TWO_STEPS) {
-		answer = true;
-	}
+	answer = true;
+    }
             
     if (answer) {
         cout << "Kngihts can beat one another!";
