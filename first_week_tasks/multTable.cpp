@@ -7,29 +7,27 @@ const int N = 10;
 
 int main()
 {	
-	int maxNumber = N * N;
-	int maxNumberDigits = 0;
-	int setwParameter = 0;
+    int maxNumber = N * N;
+    int maxNumberDigits = 0;
+    int setwParameter = 0;
 	
-	while (maxNumber > 0)
-	{
-		maxNumber /= 10;
-		maxNumberDigits++;
-	}
-	
-	setwParameter = maxNumberDigits + 1;
-	maxNumberDigits = 0;
-	
-	for (int i = 1; i <= N; i++)
+    while (maxNumber > 0)
     {
-        for (int j = 1; j <= N; j++)
-        {
-        	cout << setw(setwParameter) << i * j;
-    
-        }
-        cout << "\n";
+        maxNumber /= 10;
+        maxNumberDigits++;
     }
 	
-    return 0;
+   setwParameter = maxNumberDigits + 1;
+   maxNumberDigits = 0;
+	
+   for (int i = 1; i <= N; i++)
+   {
+       for (int j = 1; j <= N; j++)
+       {
+           cout << setw(setwParameter) << i * j;
+       }
+       cout << "\n";
+   }
+   return 0;
 }
 
